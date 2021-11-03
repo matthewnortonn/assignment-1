@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+img{
+  display: block;
+  width: 100%;
+}
 
 main {
     margin: 0 auto;
@@ -12,13 +16,28 @@ main {
   }
 
 body{
+    display: flex;
+    flex-direction: column;
     font-family: 'Comfortaa', cursive;
     line-height: 2rem;
+    color: gray;
 }
 
 header{
-    margin: 0 auto;
-    padding: 0 1rem;
+position: relative;
+
+}
+
+header .content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 
@@ -40,11 +59,7 @@ h4{
     box-sizing: border-box;
   }
   
-  
-  body{
-    margin: 5em;
-    color: gray;
-  }
+
   
   a{
     text-decoration: none;
