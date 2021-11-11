@@ -9,6 +9,10 @@ img{
   width: 100%;
 }
 
+figure{
+  margin:0;
+}
+
 main {
     margin: 0 auto;
     padding: 0 1rem;
@@ -47,7 +51,7 @@ h3,
 h4{
     font-family: 'Montserrat', sans-serif;
     color: #C44536;
-    line-height: .5rem;
+    line-height: 1.2rem;
 }
 
 
@@ -87,4 +91,146 @@ h4{
     background-color:var(--button-color);
   }
 
+header h1{
+  font-weight: 900;
+  font-size: 3rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+  line-height: 1.2;
+}
+
+header p{
+  color: black;
+  font-size: 1.4rem;
+
+}
+
+.panel{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 6rem;
+
+}
+
+.panel h2{
+  margin:0;
+}
+
+.panel .image-wrapper{
+  order:-1;
+}
+
+
+
+.cards{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 0 0.6
+
+}
+
+.cards a{
+  display:block;
+}
+
+.cards .card{
+  position: relative;
+}
+
+.cards .content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  transition: background-color 300ms ease;
+}
+
+.cards .content:hover{
+  background-color: transparent;
+}
+
+.cards p{
+  font-size: 1.7rem;
+  color: azure;
+}
+
+.loader {
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  border: 16px solid #283D3B66;
+  border-left: 16px solid #283D3B;
+  animation: load 1000ms infinite linear;
+}
+
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media(min-width: 500px){
+
+  .panel{
+    flex-direction: row;
+  }
+  
+  .panel .image-wrapper{
+    order: 0;
+    flex: 1 1 40%;
+  }
+
+  .panel .left{
+    order:-1;
+  }
+
+  .panel .text-wrapper{
+    flex: 1 1 60%;
+  }
+
+
+  .cards{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+
+  .card{
+    flex: 1 1 40%
+  }
+
+  .card .content{
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .cards p{
+    font-size: 2.5rem;
+    color: azure;
+  }
+
+}
+
+@media (min-width: 800px){
+  .cards{
+    flex-wrap: nowrap;
+  }
+
+  .cards p{
+    font-size: 1.5rem;
+  }
+}
 
