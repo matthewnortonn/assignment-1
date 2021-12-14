@@ -25,6 +25,11 @@ body{
     font-family: 'Comfortaa', cursive;
     line-height: 2rem;
     color: gray;
+
+}
+
+body.form{
+  background-color: burlywood;
 }
 
 header{
@@ -63,8 +68,10 @@ h4{
     box-sizing: border-box;
   }
   
+  {
+  --form-bg-color:#273c75;
+  }
 
-  
   a{
     text-decoration: none;
     color: #6d214f
@@ -172,6 +179,114 @@ header p{
   animation: load 1000ms infinite linear;
 }
 
+.menu-icon{
+  position: fixed;
+  top: 32px;
+  left:32px;
+  background-color:#C44536;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.menu-icon line {
+  stroke: #fff;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  transform-origin: center;
+  transition: transform 300ms ease;
+}
+
+.menu-icon line:first-child {
+  transform: translateY(16%);
+}
+
+.menu-icon line:last-child {
+  transform: translateY(-16%);
+}
+
+/* JavaScript toggles a "close" class on the <nav> when the menu-icon is clicked */
+.close nav {
+  display: block;
+}
+
+.close line:first-child {
+  transform: rotate(135deg);
+}
+
+.close line:last-child {
+  transform: rotate(-135deg);
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  background-color: burlywood;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+fieldset {
+  border: none;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-column-gap: 1rem;
+}
+
+/* legend is not considered a child of fieldset and may not render in the grid */
+legend {
+  line-height: 1.2;
+  grid-column: span 2;
+  margin-bottom: 0.6rem;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+fieldset,
+textarea {
+  margin-bottom: 1.5rem;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+textarea {
+  background-color: #fff;
+  padding: 0.4rem;
+}
+
+button {
+  justify-self: center;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  background-color: var(--form-bg-color);
+  color: var(--form-font-color);
+  border: 2px solid var(--form-font-color);
+  border-radius: 6px;
+  margin-bottom: 3rem;
+
+  transition: background-color 300ms;
+}
+
+button:hover,
+button:focus {
+  color: var(--form-bg-color);
+  background-color: var(--form-bg-color-light);
+}
+
+/* checkboxes and radios will have their own hover and focus states in next example. you don't need to add the :not() if you place your button hover and focus states below this */
+input:not([type="radio"]):not([type="checkbox"]):hover,
+input:not([type="radio"]):not([type="checkbox"]):focus,
+textarea:hover,
+textarea:focus {
+  outline: 1px solid blue;
+  background-color: var(--form-bg-color-light);
+
+  
+}
+
+
+
 @keyframes load {
   0% {
     transform: rotate(0deg);
@@ -222,7 +337,31 @@ header p{
     color: azure;
   }
 
+  form {
+    grid-template-columns: max-content 1fr;
+    grid-column-gap: 1rem;
+  }
+
+  form > label {
+    justify-self: end;
+  }
+
+  label[for="instructions"] {
+    justify-self: start;
+  }
+
+  fieldset,
+  label[for="instructions"],
+  textarea,
+  button {
+    grid-column: 2;
+  }
+
+  button {
+    justify-self: start;
+  }
 }
+
 
 @media (min-width: 800px){
   .cards{
@@ -233,4 +372,3 @@ header p{
     font-size: 1.5rem;
   }
 }
-

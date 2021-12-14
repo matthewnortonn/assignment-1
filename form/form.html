@@ -38,7 +38,7 @@
 </head>
 
 
-<body>
+<body class="form">
     <header>
         <h1>Form</h1>
         <p>Join our pack today!</p>
@@ -53,8 +53,65 @@
     </header>
     <main>
         <section>
-            <div class="loader"></div>
-        </section>
+            <h2>Bandana Survey</h2>
+            <form>
+              <label for="name">Full name:</label>
+              <input type="text" name="name" id="name">
+          
+              <label for="email">Email address:</label>
+              <input type="email" name="email" id="email" required>
+          
+              <label for="phone">Phone number:</label>
+              <input type="tel" name="phone" id="phone">
+          
+              <label for="month">Your favorite breed:</label>
+              <input type="text" name="breed" id="breed">
+          
+              <fieldset>
+                <legend>Which of the following colors would you like to incorporate into a bandana? <em>(Check all that apply)</em></legend>
+          
+                <input type="checkbox" id="wombat" name="ingredients" value="wombat">
+                <label for="wombat">Blue</label>
+          
+                <input type="checkbox" id="kiwi-feet" name="ingredients" value="kiwi-feet">
+                <label for="kiwi-feet">Red</label>
+          
+                <input type="checkbox" id="eucalyptus" name="ingredients" value="eucalyptus">
+                <label for="eucalyptus">Yellow</label>
+          
+                <input type="checkbox" id="emu" name="ingredients" value="emu">
+                <label for="emu">Orange</label>
+          
+                <input type="checkbox" id="kanga" name="ingredients" value="kanga-claw">
+                <label for="kanga">Pink</label>
+          
+                <input type="checkbox" id="platy" name="ingredients" value="platypus-liver">
+                <label for="platy">Green</label>
+              </fieldset>
+          
+              <fieldset>
+                <legend>What material would you like your bandana to be made of?</legend>
+          
+                <input type="radio" name="taste" id="cotton" value="cotton">
+                <label for="Cottom">Cotton</label>
+          
+                <input type="radio" name="taste" id="PolyBlend" value="PolyBlend">
+                <label for="PolyBlend">PolyBlend</label>
+          
+                <input type="radio" name="taste" id="Silk" value="Silk">
+                <label for="Silk">Silk</label>
+          
+                <input type="radio" name="taste" id="Denim" value="Denim">
+                <label for="Denim">Denim</label>
+              </fieldset>
+          
+              <label for="instructions">Special Instructions:</label>
+              <textarea name="instructions" id="instructions" rows="10" placeholder="Request info here"></textarea>
+          
+              <button>Submit Now</button>
+          
+            </form>
+          </section>
         <footer>
             <img class="footer" src="../images/archive.svg" alt="svg of an archive folder">
         </footer>

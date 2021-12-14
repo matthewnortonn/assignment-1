@@ -36,7 +36,6 @@
    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css" class="">
 
-
     <title>Reytuck Bandanas</title>
 </head>
 
@@ -60,7 +59,13 @@
         </div>
     </div>
     </header>
-        <nav>
+    <div class="menu-icon">
+        <svg viewbox="0 0 60 60">
+          <line x1="5%" y1="50%" x2="95%" y2="50%" />
+          <line x1="5%" y1="50%" x2="95%" y2="50%" />
+        </svg>
+      </div>
+        <nav class="main-nav">
             <ul>
                 <li> <a class="button" href="#"> Home </a> </li><br>
                 <li> <a class="button" href="about/about.html">About </a></li><br>
@@ -78,7 +83,7 @@
                 <a class="button" href="#"> Learn More </a>
             </div>
             <div class="image-wrapper">
-                <img src="https://picsum.photos/seed/picsum/600" alt="filler">
+                <img src="https://picsum.photos/id/659/600" alt="filler">
             </div>
         </article>
 
@@ -131,7 +136,7 @@
     <div class="cards">
         <div class="card">
             <a>
-                <img src="https://picsum.photos/id/1025/400" alt="">
+                <img src="https://picsum.photos/id/1012/400" alt="">
                 <div class="content">
                     <p>Hoodies</p>
                 </div>
@@ -139,7 +144,7 @@
         </div>
         <div class="card">
             <a>
-                <img src="https://picsum.photos/id/1018/400" loading="lazy" alt="">
+                <img src="https://picsum.photos/id/1025/400" loading="lazy" alt="">
                 <div class="content">
                     <p>Blankets</p>
                 </div>
@@ -147,7 +152,7 @@
         </div>
         <div class="card">
             <a>
-                <img src="https://picsum.photos/id/1019/400" loading="lazy" alt="">
+                <img src="https://picsum.photos/id/237/400" loading="lazy" alt="">
                 <div class="content">
                     <p>Bandanas</p>
                 </div>
@@ -155,7 +160,7 @@
         </div>
         <div class="card">
             <a>
-                <img src="https://picsum.photos/id/1012/400" loading="lazy" alt="">
+                <img src="https://picsum.photos/id/837/400" loading="lazy" alt="">
                 <div class="content">
                     <p>Doggie Boots</p>
                 </div>
@@ -167,6 +172,16 @@
     <footer>
         <p>When your Reytuck Bandanas arrive, be sure to post a photo of you and your pet on social media for a chance to be featured on our platforms!</p>
     </footer>
+    <nav>
+        <script>
+            const header = document.querySelector("header");
+
+            document.querySelector(".menu-icon").addEventListener("click", () => {
+                header.classList.toggle("close");
+         });
+        </script>
+    </nav>    
+
 </body>
 
 
