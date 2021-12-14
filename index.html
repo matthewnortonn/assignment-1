@@ -59,13 +59,14 @@
         </div>
     </div>
     </header>
-    <div class="menu-icon">
+    <div class="main-nav">
+        <div class="menu-icon">
         <svg viewbox="0 0 60 60">
           <line x1="5%" y1="50%" x2="95%" y2="50%" />
           <line x1="5%" y1="50%" x2="95%" y2="50%" />
         </svg>
-      </div>
-        <nav class="main-nav">
+        </div>
+        <nav>
             <ul>
                 <li> <a class="button" href="#"> Home </a> </li><br>
                 <li> <a class="button" href="about/about.html">About </a></li><br>
@@ -73,6 +74,7 @@
                 <li> <a class="button" href="form/form.html"> Form </a></li>
             </ul>
         </nav>
+    </div>
     <main>
         <article class="panel">
             <div class="text-wrapper left">
@@ -172,16 +174,13 @@
     <footer>
         <p>When your Reytuck Bandanas arrive, be sure to post a photo of you and your pet on social media for a chance to be featured on our platforms!</p>
     </footer>
-    <nav>
-        <script>
-            const header = document.querySelector("header");
+         <script>
+            const header = document.querySelector(".main-nav");
 
             document.querySelector(".menu-icon").addEventListener("click", () => {
                 header.classList.toggle("close");
          });
-        </script>
-    </nav>    
-
+        </script> 
 </body>
 
 

@@ -30,16 +30,24 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css" class="">
+    <link rel="stylesheet" href="../styles/main.css">
 
     <title>Reytuck Bandanas</title>
 </head>
 
 
-<body>
-    <header>
-        <h1>About</h1>
-        <p>Welcome to our online store!</p>
+<body class="about">
+<header>
+    <h1>About</h1>
+    <p>Welcome to our online store!</p>
+</header>
+    <div class="main-nav">
+        <div class="menu-icon">
+        <svg viewbox="0 0 60 60">
+        <line x1="5%" y1="50%" x2="95%" y2="50%" />
+        <line x1="5%" y1="50%" x2="95%" y2="50%" />
+        </svg>
+        </div>
         <nav>
             <ul>
                 <li> <a class="button" href="../index.html"> Home </a></li><br><br>
@@ -48,7 +56,8 @@
                 <li> <a class="button" href="../form/form.html"> Form </a></li>
             </ul>
         </nav>
-    </header>
+    </div> 
+ 
     <main>
         <article>
             <h2>All About Us</h2>
@@ -58,5 +67,12 @@
             </p>
         </article>
     </main>
+    <script>
+        const header = document.querySelector(".main-nav");
+
+        document.querySelector(".menu-icon").addEventListener("click", () => {
+            header.classList.toggle("close");
+     });
+    </script>
 </body>
 </html>

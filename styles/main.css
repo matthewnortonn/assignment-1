@@ -95,6 +95,11 @@ h4{
     background-color:var(--button-color);
   }
 
+.about header,
+.form header{
+  margin-top: 130px;
+}
+
 header h1{
   font-weight: 900;
   font-size: 3rem;
@@ -185,6 +190,7 @@ header p{
   height: 80px;
   border-radius: 50%;
   padding: 1rem;
+  z-index:1;
 }
 
 .menu-icon line {
@@ -203,10 +209,44 @@ header p{
   transform: translateY(-16%);
 }
 
-/* JavaScript toggles a "close" class on the <nav> when the menu-icon is clicked */
-.close nav {
-  display: block;
+.main-nav nav{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:#fff ;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-110vw);
+  transition: transform 300ms;
 }
+
+.main-nav ul{
+  display:flex;
+  margin: 2rem 0;
+  flex-direction: column;
+  gap:1.5rem;
+
+}
+
+.main-nav.close nav{
+  transform: translateX(0);
+
+}
+
+
+.main-nav ul{
+list-style-type: none;
+
+}
+
+
+/* JavaScript toggles a "close" class on the <nav> when the menu-icon is clicked */
+/* .close nav {
+  display: block;
+} */
 
 .close line:first-child {
   transform: rotate(135deg);
@@ -296,6 +336,10 @@ textarea:focus {
 
 @media(min-width: 500px){
 
+  .menu-icon{
+    display:none;
+  }
+
   .panel{
     flex-direction: row;
   }
@@ -357,6 +401,9 @@ textarea:focus {
   button {
     justify-self: start;
   }
+  
+
+
 }
 
 
