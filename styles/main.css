@@ -263,6 +263,18 @@ list-style-type: none;
   transform: rotate(-135deg);
 }
 
+.form section{
+  display:flex;
+  flex-direction: column;
+  gap:3rem;
+}
+
+.form .svg-wrapper{
+  align-self: center;
+  min-width: 100px;
+  max-width: 260px;
+}
+
 form {
   display: grid;
   grid-template-columns: 1fr;
@@ -364,6 +376,12 @@ input[type="radio"]:checked::after{
   transform: scale(1);
 }
 
+input[type="checkbox"]:hover,
+input[type="radio"]:hover,
+input[type="checkbox"]:focus,
+input[type="radio"]:focus{
+  box-shadow: 0 0 6px steelblue;
+}
 
 
 button:hover,
@@ -396,6 +414,12 @@ textarea:focus {
 
 
 @media(min-width: 500px){
+
+  .form section{
+    flex-direction: row;
+
+  } 
+
 
   .menu-icon{
     display:none;
