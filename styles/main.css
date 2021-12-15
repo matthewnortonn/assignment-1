@@ -518,3 +518,41 @@ textarea:focus {
     font-size: 1.5rem;
   }
 }
+
+#hero{
+  height:100vh;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+
+}
+
+#hero video{
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
+#hero .caption{
+  position: relative;
+  z-index: 20;
+  text-align:center;
+  font-size: 2rem;
+}
+
+#hero .caption p{
+  color:#fff
+}
+
+#hero::after{
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top:0;
+  bottom:0;
+
+}
